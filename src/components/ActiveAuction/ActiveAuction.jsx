@@ -11,7 +11,7 @@ const ActiveAuction = ({ auction }) => {
           {/* head */}
           <thead>
             <tr>
-              <th>Items</th>
+              <th>Item: {auction.id}</th>
               <th>Current Bid</th>
               <th>Time Left</th>
               <th>Bid Now</th>
@@ -23,16 +23,16 @@ const ActiveAuction = ({ auction }) => {
               <td>
                 <div className="flex gap-2">
                   <img
-                    className="w-26 h-26 rounded-md"
+                    className="w-22 h-22 rounded-md"
                     src={auction.image}
                     alt="pic"
                   />{" "}
                   <h2 className="pt-3">{auction.title}</h2>
                 </div>
               </td>
-              <td>${auction.currentBidPrice}</td>
-              <td>{auction.timeLeft}</td>
-              <td>
+              <td className="text-center">${auction.currentBidPrice}</td>
+              <td className="text-center">{auction.timeLeft}</td>
+              <td className="text-center">
                 <button>
                   <Heart></Heart>
                 </button>
