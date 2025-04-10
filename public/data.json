@@ -1,0 +1,66 @@
+[
+    {
+      "id": 1,
+      "title": "Vintage Leica M3 Camera",
+      "description": "A classic 1960s film camera in excellent condition.",
+      "currentBidPrice": 1120.00,
+      "timeLeft": "5h 30m",
+      "bidsCount": 8,
+      "image": "https://i.ibb.co.com/n5CRgHx/Bid1-min.png"
+    },
+    {
+      "id": 2,
+      "title": "Gaming Laptop with RTX",
+      "description": "High-performance laptop with RTX 3070, 16GB RAM, and 1TB SSD.",
+      "currentBidPrice": 950.00,
+      "timeLeft": "1day left",
+      "bidsCount": 15,
+      "image": "https://i.ibb.co.com/dFPR2SJ/Bid3-min.png"
+    },
+    {
+      "id": 3,
+      "title": "Handmade Wooden Chair",
+      "description": "Crafted from reclaimed wood. Rustic and comfortable.",
+      "currentBidPrice": 275.00,
+      "timeLeft": "3h 10m",
+      "bidsCount": 6,
+      "image": "https://i.ibb.co.com/r2NLzLpJ/Bid5-min.png"
+    },
+    {
+      "id": 4,
+      "title": "Rolex Submariner 16610",
+      "description": "Brand new smartwatch with health tracking and GPS. it has gold elements for body.",
+      "currentBidPrice": 8210.00,
+      "timeLeft": "3days left",
+      "bidsCount": 10,
+      "image": "https://i.ibb.co.com/tMk0Z4xm/Bid4-min.png"
+    },
+    {
+      "id": 5,
+      "title": "1965 Gibson SG Standard Electric Guitar",
+      "description": "Lightweight aluminum, 1965-modern electric guitar comfortable in every situation.",
+      "currentBidPrice": 730.00,
+      "timeLeft": "2days left",
+      "bidsCount": 18,
+      "image": "https://i.ibb.co.com/0p9mtBzy/Bid2-min.png"
+    },
+    {
+      "id": 6,
+      "title": "The Case of the Missing Smile: A Bedtime Story",
+      "description": "The Case of The Missing Smile is about a little girl who lost her smile. Not because she was unhappy, but because she was afraid of losing a friend - the Tooth Fairy.",
+      "currentBidPrice": 145.00,
+      "timeLeft": "4h 20m",
+      "bidsCount": 7,
+      "image": "https://i.ibb.co.com/CsHmXh30/Bid6-min.png"
+    },
+    {
+        "id": 7,
+        "title": "Paper Craft / Flowers",
+        "description": "Make your own beautiful paper flower bouquet with these DIY paper craft ideas to, with a huge variety of flowers you can create!",
+        "currentBidPrice": 89,
+        "timeLeft": "5h 15m",
+        "bidsCount": 9,
+        "image": "https://i.ibb.co.com/Ldywyd5H/Bid7-min.png"
+      }
+  ]
+  

@@ -1,0 +1,49 @@
+import React from "react";
+import Heart from "../../assets/icons/Heart";
+
+const ActiveAuction = ({ auction }) => {
+//   console.log(auction);
+  return (
+    <div className="w-10/12 mx-auto lg:mt-16">
+      
+      <div className="w-[70%] overflow-x-auto">
+        <table className="table table-zebra">
+          {/* head */}
+          <thead>
+            <tr>
+              <th>Items</th>
+              <th>Current Bid</th>
+              <th>Time Left</th>
+              <th>Bid Now</th>
+            </tr>
+          </thead>
+          <tbody>
+            {/* row 1 */}
+            <tr>
+              <td>
+                <div className="flex gap-2">
+                  <img
+                    className="w-26 h-26 rounded-md"
+                    src={auction.image}
+                    alt="pic"
+                  />{" "}
+                  <h2 className="pt-3">{auction.title}</h2>
+                </div>
+              </td>
+              <td>${auction.currentBidPrice}</td>
+              <td>{auction.timeLeft}</td>
+              <td>
+                <button>
+                  <Heart></Heart>
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div className="w-[30%]"></div>
+    </div>
+  );
+};
+
+export default ActiveAuction;
