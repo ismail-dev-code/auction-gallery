@@ -4,8 +4,6 @@ import ActiveAuctions from "./components/ActiveAuctions/ActiveAuctions";
 import Banner from "./components/Banner/Banner";
 import Navbar from "./components/Navbar/Navbar";
 
-const auctionsPromise = fetch("./data.json").then((res) => res.json());
-
 function App() {
   return (
     <>
@@ -22,7 +20,7 @@ function App() {
           </p>
         }
       >
-        <ActiveAuctions auctionsPromise={auctionsPromise}></ActiveAuctions>
+        <ActiveAuctions></ActiveAuctions>
       </Suspense>
     </>
   );

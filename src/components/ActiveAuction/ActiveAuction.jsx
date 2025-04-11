@@ -1,17 +1,19 @@
-import { useState } from "react";
+import { use, useState } from "react";
 import Heart from "../../assets/icons/Heart";
 
-const ActiveAuction = ({ auction }) => {
-  const [favorites, setFavorite] = useState([]);
+const ActiveAuction = ({ auctionsPromise }) => {
+  const data = use(auctionsPromise);
+  const [favorites, setFavorites] = useState([]);
 
   const handleAddToFavorite = (item) => {
     const result = favorites.find((fav) => fav.id === item.id);
    
 
     if (!result) {
-      setFavorite([...favorites, item]);
+      setFavorites([...favorites, item]);
     }
   };
+
   return (
     <div className="w-10/12 mx-auto flex lg:mt-16">
       <div className="w-[70%] shadow-2xl rounded-2xl overflow-x-auto">
@@ -19,7 +21,7 @@ const ActiveAuction = ({ auction }) => {
           {/* head */}
           <thead>
             <tr>
-              <th>Item: {auction.id}</th>
+              <th>Item:</th>
               <th>Current Bid</th>
               <th>Time Left</th>
               <th>Bid Now</th>
@@ -27,7 +29,7 @@ const ActiveAuction = ({ auction }) => {
           </thead>
           <tbody>
             {/* row 1 */}
-            <tr>
+            {data.map((auction) => <tr key={auction.id}>
               <td>
                 <div className="flex gap-2">
                   <img
@@ -48,7 +50,7 @@ const ActiveAuction = ({ auction }) => {
                   <Heart />
                 </button>
               </td>
-            </tr>
+            </tr>)}
           </tbody>
         </table>
       </div>
