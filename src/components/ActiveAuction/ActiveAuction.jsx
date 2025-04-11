@@ -1,13 +1,21 @@
-import React from "react";
+import { useState } from "react";
 import Heart from "../../assets/icons/Heart";
 
 const ActiveAuction = ({ auction }) => {
-//   console.log(auction);
+  const [favorites, setFavorite] = useState([]);
+
+  const handleAddToFavorite = (item) => {
+    const result = favorites.find((fav) => fav.id === item.id);
+   
+
+    if (!result) {
+      setFavorite([...favorites, item]);
+    }
+  };
   return (
-    <div className="w-10/12 mx-auto lg:mt-16">
-      
-      <div className="w-[70%] overflow-x-auto">
-        <table className="table table-zebra">
+    <div className="w-10/12 mx-auto flex lg:mt-16">
+      <div className="w-[70%] shadow-2xl rounded-2xl overflow-x-auto">
+        <table className="table ">
           {/* head */}
           <thead>
             <tr>
@@ -33,15 +41,44 @@ const ActiveAuction = ({ auction }) => {
               <td className="text-center">${auction.currentBidPrice}</td>
               <td className="text-center">{auction.timeLeft}</td>
               <td className="text-center">
-                <button>
-                  <Heart></Heart>
+                <button
+                  onClick={() => handleAddToFavorite(auction)}
+                  className="cursor-pointer"
+                >
+                  <Heart />
                 </button>
               </td>
             </tr>
           </tbody>
         </table>
       </div>
-      <div className="w-[30%]"></div>
+      <div className="w-[30%]">
+        <div className="text-2xl">
+          <h2 className="flex items-center gap-1.5">
+            <Heart />
+            Favorite Items
+          </h2>
+        </div>
+
+        <div className="space-y-3">
+          {favorites.length === 0 ? (
+            <p className="text-gray-500">No favorite items yet.</p>
+          ) : (
+            favorites.map((fav) => (
+              <div
+                key={fav.id}
+                className="flex items-center gap-3 bg-gray-100 p-2 rounded-lg shadow-sm"
+              >
+                <img src={fav.image} alt={fav.title} className="w-12 h-12 rounded-md" />
+                <div>
+                  <h3 className="font-medium">{fav.title}</h3>
+                  <p className="text-sm text-gray-600">${fav.currentBidPrice}</p>
+                </div>
+              </div>
+            ))
+          )}
+        </div>
+      </div>
     </div>
   );
 };
